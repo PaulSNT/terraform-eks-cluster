@@ -15,7 +15,7 @@ module "eks" {
       name                          = "${local.cluster_name}-ng"
       capacity_type		    = "SPOT"
       instance_types                = ["t2.small"]
-      key_name			    = "pls-imported-key"
+      key_name			    = "PSS-Imported-Key"
       create_launch_template        = "true"
       launch_template_name          = "${local.cluster_name}-launch-template"
       max_size                      = 3
