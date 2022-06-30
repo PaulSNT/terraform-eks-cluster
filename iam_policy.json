@@ -38,7 +38,7 @@
                 "elasticloadbalancing:DescribeTargetGroups",
                 "elasticloadbalancing:DescribeTargetGroupAttributes",
                 "elasticloadbalancing:DescribeTargetHealth",
-                "elasticloadbalancing:DescribeTags"
+                "elasticloadbalancing:DescribeTags",
 		"eks:ListFargateProfiles",
                 "eks:DescribeNodegroup",
                 "eks:ListNodegroups",
