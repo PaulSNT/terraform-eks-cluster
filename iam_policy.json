@@ -39,6 +39,17 @@
                 "elasticloadbalancing:DescribeTargetGroupAttributes",
                 "elasticloadbalancing:DescribeTargetHealth",
                 "elasticloadbalancing:DescribeTags"
+		"eks:ListFargateProfiles",
+                "eks:DescribeNodegroup",
+                "eks:ListNodegroups",
+                "eks:ListUpdates",
+                "eks:AccessKubernetesApi",
+                "eks:ListAddons",
+                "eks:DescribeCluster",
+                "eks:DescribeAddonVersions",
+                "eks:ListClusters",
+                "eks:ListIdentityProviderConfigs",
+                "iam:ListRoles"
             ],
             "Resource": "*"
         },
