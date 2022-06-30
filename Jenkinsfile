@@ -1,10 +1,17 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'environment', defaultValue: 'Terraform', description: 'Workspace/environment file to use for deployment')
+        booleanParam(name: 'autoApprove', defaultValue: false, description: 'Automatically run apply after generating plan?')
+        booleanParam(name: 'destroy', defaultValue: false, description: 'Destroy Terraform build?')
+
+    }
+
     stages {
         stage("Paso 1: Checkout") {
             steps {
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/PaulSNT/terraform-eks-cluster']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/PaulSNT/terraform-eks-cluster']]])
             }
         }
 
